@@ -66,7 +66,7 @@ int main()
     }
 
     printf("\n\nitoa with base: ");
-    char s[10]; // Replace '100' with the desired size of the character array
+    char s[10] = {0}; // Replace '100' with the desired size of the character array
     ex3p5(6, s, 2);
     printf("%s", s);
 
