@@ -1,31 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-
-void reverse(char s[]) {
-    int length = strlen(s);
-    for (int i = 0; i < length / 2; i++) {
-        char temp = s[i];
-        s[i] = s[length - i - 1];
-        s[length - i - 1] = temp;
-    }
-}
-
-/* itoa:  convert n to characters in s */
-void itoa(int n, char s[])
-{
-    int i, sign;
-
-    if ((sign = n) < 0)  /* record sign */
-        n = -n;          /* make n positive */
-    i = 0;
-    do {       /* generate digits in reverse order */
-        s[i++] = n % 10 + '0';   /* get next digit */
-    } while ((n /= 10) > 0);     /* delete it */
-    if (sign < 0)
-        s[i++] = '-';
-    s[i] = '\0';
-    reverse(s);
-}
+#include "funcs.h"
 
 /*  
     Exercise 3-5. Write the function itob(n,s,b) that converts the integer n into a base b character 
@@ -53,6 +28,7 @@ int main()
 {
     int fahr, celsius;
     int lower, upper, step;
+    double sum, atof(char []);
 
     lower = 0;      /* lower limit of temperature table */
     upper = 300;    /* upper limit */
